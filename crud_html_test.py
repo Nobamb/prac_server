@@ -1,46 +1,66 @@
 # 클래스 제작
 
+
 # 열고 닫는 태그가 하나에 모여있는 태그
-class Tag():
-  def __init__(self, tag_name):
-    self.tag = f"<{tag_name} />"
 
-# 여는 태그만 있는 태그
-class OpenTag:
-  # 생성자 생성
-  def __init__(self, tag_name):
-    self.open = f"<{tag_name}>"
+# 클로저 진행
+def tag(tag_name,types):
+    # 이름 지정(은닉 변수)
+    tag_start = f"<{tag_name} "
+    
+    # type들 추가(클로저)
+    def type_plus(tagOpen, types):
+        tag = tagOpen
+        # 배열을 하나씩 나눔
+        for type_name in types:
+            # 타입명을 tag에 추가
+            tag += f"{type_name} "
+        # 닫는 태그 지정
+        tag += "/>"
+        # tag 반환
+        return tag
+    
+    # type추가
+    tag = type_plus(tag_start, types)
+    
+    # tag 출력
+    return tag
 
-# Tag 오버라이드(닫는 태그 추가)
-class OpenCloseTag(OpenTag):
-  
-  def __init__(self, tag_name):
-     super().__init__(tag_name)
-     self.close = f"</{tag_name}>"
+# meta 태그
+meta = tag("meta",["type1","type2"])
+
+print(meta)
 
 
-# 테스트
-# "!DOCTYPE html"
-doctype_html = OpenTag("!DOCTYPE html") 
 
-# 출력
-print(doctype_html.open)
+# 필요한 태그
+# "!DOCTYPE html" : OpenTag
+# html : OpenCloseTag
+# head : OpenCloseTag
+# body : OpenCloseTag
 
-# img
-img = Tag("img")
 
-# 출력
-print(img.tag)
+# # 테스트
+# # "!DOCTYPE html"
+# doctype_html = OpenTag("!DOCTYPE html")
 
-# html
-html = OpenCloseTag("html")
+# # 출력
+# print(doctype_html.open)
 
-# 출력
-# open
-print(html.open)
-# close
-print(html.close)
+# # img
+# img = Tag("img")
 
+# # 출력
+# print(img.tag)
+
+# # html
+# html = OpenCloseTag("html")
+
+# # 출력
+# # open
+# print(html.open)
+# # close
+# print(html.close)
 
 
 # # 객체 생성하기
@@ -78,7 +98,6 @@ print(html.close)
 #     # title 닫는 태그
 #     "close": "</title>",
 # }
-
 
 
 # 파이썬의 crud를 활용하여
