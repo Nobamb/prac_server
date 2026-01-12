@@ -5,24 +5,24 @@
 
 # 클로저 진행
 # 한번에 열고 닫는 태그
-def tag(tag_name,types):
+def tag(tag_name,types,values):
     # 이름 지정(은닉 변수)
     tag_start = f"<{tag_name}"
     
     # type들 추가(클로저)
-    def type_plus(tagOpen, types):
+    def type_plus(tagOpen, types, values):
         tag = tagOpen
         # 배열을 하나씩 나눔
-        for type_name in types:
+        for index,type_name in enumerate(types):
             # 타입명을 tag에 추가
-            tag += f" {type_name}"
+            tag += f" {type_name}={values[index]}"
         # 닫는 태그 지정
         tag += "/>"
         # tag 반환
         return tag
     
     # type추가
-    tag = type_plus(tag_start, types)
+    tag = type_plus(tag_start, types, values)
     
     # tag 출력
     return tag
@@ -103,7 +103,7 @@ def open_close_tag(tag_name, types, childrens):
     
     
 # meta 태그
-meta = tag("meta",["type1","type2"])
+meta = tag("meta",["type1","type2"], ["value1","value2"])
 
 print(meta)
 
