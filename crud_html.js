@@ -5,7 +5,8 @@ import fs from 'node:fs/promises';
 import tag from "./html_tags/tag.js"
 import openTag from "./html_tags/openTag.js"
 import openCloseTag from "./html_tags/openCloseTag.js"
-
+// 태그 구조 모듈 가져오기
+import {html, doctype} from "./html_tags_struct/struct.js"
 
 
 // 파일을 작성하는 함수 생성
@@ -31,14 +32,14 @@ const createFile = async (filename, fileContent)=> {
 
 }
 
-// 테스트
-// h1 태그에 class, id 속성 추가
-// class : "title"
-// id : "h1Title"
-// children : "안녕하세요"
+// // 테스트
+// // h1 태그에 class, id 속성 추가
+// // class : "title"
+// // id : "h1Title"
+// // children : "안녕하세요"
 
-const h1 = openCloseTag("h1",["class","id"],["title","h1Title"],["안녕하세요"])
+// const h1 = openCloseTag("h1",["class","id"],["title","h1Title"],["안녕하세요"])
 
 
 // 실행
-await createFile("indexBC.html",h1)
+await createFile("indexBC.html",doctype + html)
