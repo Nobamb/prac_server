@@ -48,3 +48,7 @@ const openTag = (tagName, types = [], values = []) => {
 // // 출력
 // console.log(testTag1);
 // console.log(testTag2);
+
+
+// export 
+export default openTag;
