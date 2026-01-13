@@ -1,4 +1,3 @@
-
 // 제작할 태그들의 구조의 집합
 
 // 태그 관련 함수들 가져옴
@@ -88,13 +87,26 @@ class Struct {
   // body, head 태그를 children으로 받음
   static html = openCloseTag("html", ["lang"], ["ko"], [this.head, this.body]);
 
-  //   기본값 자동완성
-//   함수형식(필요할 때만 더하기 위함)
-  static defualtStruct(){
-   return this.doctype + this.html;  
-  } 
-}
+  //   값을 바꾸기
+  // changeTag(tagName, newTypes, newValues)
+  static changeTag(tagName, newTypes = [], newValues = []) {
+    // 태그 이름을 찾아서 값을 바꿈
+    this[tagName] = openTag(tagName, newTypes, newValues);
+  }
 
+  // chidren까지 값 바꾸기
+  // changeTag(tagName, newTypes, newValues)
+  static changeTagWithChild(tagName, newTypes = [], newValues = [], children=[]) {
+    // 태그 이름을 찾아서 값을 바꿈
+    this[tagName] = openCloseTag(tagName, newTypes, newValues, children);
+  }
+
+  //   기본값 자동완성
+  //   함수형식(필요할 때만 더하기 위함)
+  static defualtStruct() {
+    return this.doctype + this.html;
+  }
+}
 
 // 변경 테스트
 // static 값을 변경하여 값이 제대로 바뀌는 지 테스트
@@ -104,7 +116,6 @@ Struct.h1 = openCloseTag(
   ["newTitle", "newH1Title"],
   ["변경된 제목"]
 );
-
 
 // 내보내기
 export default Struct;
