@@ -86,6 +86,9 @@ class Struct {
   // 속성값 ko
   // body, head 태그를 children으로 받음
   static html = openCloseTag("html", ["lang"], ["ko"], [this.head, this.body]);
+
+  //   기본값 자동완성
+  static defualtStruct = this.doctype + this.html;
 }
 
 // 내보내기
