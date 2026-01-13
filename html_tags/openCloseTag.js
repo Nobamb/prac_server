@@ -43,21 +43,21 @@ const openCloseTag = (tagName, types = [], values = [], children=[])=> {
 }
 
 
-// 테스트
-// 속성과 속성값이 있는 태그
-const testTag1 = openCloseTag("div",["class", "id"], ["container","main"], ["안녕하세요","<p>반갑습니다</p>"]);
-// 속성만 있는 태그(속성값 x)
-const testTag2 = openCloseTag("div",["class", "id"], [], ["내용이 있는 태그"]);
-// 속성, 속성값이 없는 태그
-const testTag3 = openCloseTag("div", [], [], ["내용이 있는 태그"]);
-// 내용이 있는 태그
-const testTag4 = openCloseTag("p", [], [], ["안녕하세요! 내용이 있는 태그입니다."]);
-// 모두 없는 태그
-const testTag5 = openCloseTag("script")
+// // 테스트
+// // 속성과 속성값이 있는 태그
+// const testTag1 = openCloseTag("div",["class", "id"], ["container","main"], ["안녕하세요","<p>반갑습니다</p>"]);
+// // 속성만 있는 태그(속성값 x)
+// const testTag2 = openCloseTag("div",["class", "id"], [], ["내용이 있는 태그"]);
+// // 속성, 속성값이 없는 태그
+// const testTag3 = openCloseTag("div", [], [], ["내용이 있는 태그"]);
+// // 내용이 있는 태그
+// const testTag4 = openCloseTag("p", [], [], ["안녕하세요! 내용이 있는 태그입니다."]);
+// // 모두 없는 태그
+// const testTag5 = openCloseTag("script")
 
-// 출력
-console.log(testTag1);
-console.log(testTag2);
-console.log(testTag3);
-console.log(testTag4);
-console.log(testTag5);
+// // 출력
+// console.log(testTag1);
+// console.log(testTag2);
+// console.log(testTag3);
+// console.log(testTag4);
+// console.log(testTag5);
