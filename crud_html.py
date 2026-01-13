@@ -33,7 +33,7 @@ body = open_close_tag("body",childrens=[h1, p])
 
 # head 태그
 # open_close_tag
-head = open_close_tag("haed", childrens=[meta_charset, meta_name_content])
+head = open_close_tag("head", childrens=[meta_charset, meta_name_content])
 
 
 # html태그
