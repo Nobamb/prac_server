@@ -17,6 +17,7 @@ const createFile = async (filename, fileContent)=> {
 
     }
     catch(error){
+        console.error("파일 에러 발생",error)
         throw error;
     }
     finally{
