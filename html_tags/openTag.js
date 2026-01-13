@@ -41,10 +41,10 @@ const openTag = (tagName, types = [], values = []) => {
 };
 
 
-// 테스트
-const testTag1 = openTag("div", ["class", "id"], ['"container"','"main"']);
-const testTag2 = openTag("div");
+// // 테스트
+// const testTag1 = openTag("div", ["class", "id"], ['"container"','"main"']);
+// const testTag2 = openTag("div");
 
-// 출력
-console.log(testTag1);
-console.log(testTag2);
+// // 출력
+// console.log(testTag1);
+// console.log(testTag2);
