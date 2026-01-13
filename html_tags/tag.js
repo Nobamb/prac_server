@@ -54,15 +54,15 @@ const tag = (tagName, types=[],values=[]) => {
 
 }
 
-// 태그 생성 테스트
-const testTag1 = tag("div",["class", "id"], ["container","main"])
-// 태그 생성 테스트 2
-const testTag2 = tag("div")
+// // 태그 생성 테스트
+// const testTag1 = tag("div",["class", "id"], ["container","main"])
+// // 태그 생성 테스트 2
+// const testTag2 = tag("div")
 
 
-// 출력
-console.log(testTag1)
-console.log(testTag2)
+// // 출력
+// console.log(testTag1)
+// console.log(testTag2)
 
 // export
 export default tag
