@@ -6,7 +6,7 @@ import tag from "./html_tags/tag.js"
 import openTag from "./html_tags/openTag.js"
 import openCloseTag from "./html_tags/openCloseTag.js"
 // 태그 구조 모듈 가져오기
-import {html, doctype} from "./html_tags_struct/struct.js"
+import Struct from "./html_tags_struct/struct.js"
 
 
 // 파일을 작성하는 함수 생성
@@ -42,4 +42,4 @@ const createFile = async (filename, fileContent)=> {
 
 
 // 실행
-await createFile("indexBC.html",doctype + html)
+await createFile("indexBC.html",Struct.doctype + Struct.html)
