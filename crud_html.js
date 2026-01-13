@@ -42,4 +42,4 @@ const createFile = async (filename, fileContent)=> {
 
 
 // 실행
-await createFile("indexBC.html",Struct.doctype + Struct.html)
+await createFile("indexBC.html",Struct.defualtStruct)
