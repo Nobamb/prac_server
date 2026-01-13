@@ -61,3 +61,6 @@ const openCloseTag = (tagName, types = [], values = [], children=[])=> {
 // console.log(testTag3);
 // console.log(testTag4);
 // console.log(testTag5);
+
+// export
+export default openCloseTag;
