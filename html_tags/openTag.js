@@ -39,3 +39,12 @@ const openTag = (tagName, types = [], values = []) => {
   //   태그 return
   return tag;
 };
+
+
+// 테스트
+const testTag1 = openTag("div", ["class", "id"], ['"container"','"main"']);
+const testTag2 = openTag("div");
+
+// 출력
+console.log(testTag1);
+console.log(testTag2);
