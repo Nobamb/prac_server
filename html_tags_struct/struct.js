@@ -1,3 +1,4 @@
+
 // 제작할 태그들의 구조의 집합
 
 // 태그 관련 함수들 가져옴
@@ -88,7 +89,10 @@ class Struct {
   static html = openCloseTag("html", ["lang"], ["ko"], [this.head, this.body]);
 
   //   기본값 자동완성
-  static defualtStruct = this.doctype + this.html;
+//   함수형식(필요할 때만 더하기 위함)
+  static defualtStruct(){
+   return this.doctype + this.html;  
+  } 
 }
 
 
