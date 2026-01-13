@@ -41,5 +41,5 @@ html = open_close_tag("html",childrens=[head,body])
 
 
 # 작성
-with open("indexB.html","w")as file:
+with open("indexB.html","w",encoding="utf-8")as file:
     file.write(f"{doc_html}{html}")
