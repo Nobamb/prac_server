@@ -91,5 +91,16 @@ class Struct {
   static defualtStruct = this.doctype + this.html;
 }
 
+
+// 변경 테스트
+// static 값을 변경하여 값이 제대로 바뀌는 지 테스트
+Struct.h1 = openCloseTag(
+  "h1",
+  ["class", "id"],
+  ["newTitle", "newH1Title"],
+  ["변경된 제목"]
+);
+
+
 // 내보내기
 export default Struct;
