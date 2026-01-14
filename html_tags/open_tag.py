@@ -12,7 +12,7 @@ def open_tag(tag_name, types=[], values=[]):
         # values 적용
         if type(values) == list and values != []:
             for index, type_name in enumerate(types):
-                tag += f" {type_name}={values[index]}"
+                tag += f' {type_name}="{values[index]}"'
         # values가 리스트면서 값이 있다면
         # values가 빈배열이 맞다면
         elif type(values) == list and values == []:
