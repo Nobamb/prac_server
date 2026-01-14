@@ -68,3 +68,19 @@ class WebServer(BaseHTTPRequestHandler):
         # 서버에 보여줌
         # write에 값을 집어넣고, encoding하기(utf-8)
         self.wfile.write(result.encoding("utf-8"))
+        
+        
+# http 설정
+# server로 생정
+# 첫번째 파라미터는
+# 튜플형식으로, ("",8000)
+# 첫번째는 ip 지정, ""는 모든 ip 허용
+# 두번째는 포트 지정, 8000이면 8000번 포트
+# 두번째 파라미터는
+# webserver 클래스 가져옴
+# 자동으로 do_get 메서드 사용하기 위해
+http = HTTPServer(("",8000),WebServer)
+
+# http 실행
+# serve_forever
+http.serve_forever()
