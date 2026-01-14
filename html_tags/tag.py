@@ -12,7 +12,7 @@ def tag(tag_name, types=[], values=[]):
             # 배열을 하나씩 나눔
             for index, type_name in enumerate(types):
                 # 타입명을 tag에 추가, 값도 추가
-                tag += f" {type_name}={values[index]}"
+                tag += f' {type_name}="{values[index]}"'
         # values타입이 list면서 비어있을 때
         elif type(values) == list and values == []:
             # 배열을 하나씩 나눔
