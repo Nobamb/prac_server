@@ -12,7 +12,7 @@ def open_close_tag(tag_name,  childrens=[], types=[], values=[]):
             # type들 모두 추가
             for index, type_name in enumerate(types):
                 # type 및 values의 인덱스에 해당하는 값들 추가
-                tag += f" {type_name}={values[index]}"
+                tag += f' {type_name}="{values[index]}"'
         # values가 list면서 빈배열일때
         if type(values) and values == []:
             # type들 모두 추가
