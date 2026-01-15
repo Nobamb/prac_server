@@ -6,7 +6,7 @@
 // 두번째 파라미터 : 속성명 typeps(배열형식)
 // 세번째 파라미터 : 속성값 values(배열형식)
 
-const openTag = (tagName, types = [], values = []) => {
+const openTag = (tagName, {types = [], values = []}={}) => {
   // 태그
   let tag = `<${tagName}`;
 
