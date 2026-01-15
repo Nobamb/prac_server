@@ -9,7 +9,7 @@
 // 아예 속성을 안넣고 태그를 만들수있기에
 
 
-const tag = (tagName, types=[],values=[]) => {
+const tag = (tagName, {types=[],values=[]}={}) => {
     // 시작 태그
     let tag = `<${tagName}`
 
