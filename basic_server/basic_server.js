@@ -61,7 +61,7 @@ const server = http.createServer((req, res) => {
     // head 작성
     // openCloseTag 사용
     // metaCharset, metaContent, title을 받음
-    const head = openCloseTag("head", [metaCharset, metaContent, title]);
+    const head = openCloseTag("head", {children:[metaCharset, metaContent, title]});
 
     // html 태그 작성
     const html = openCloseTag("html", { children: [head, body] });
@@ -73,3 +73,16 @@ const server = http.createServer((req, res) => {
     res.end(result);
   }
 });
+
+
+// 8000포트에서 테스트
+
+
+// 포트번호
+const port = 8000
+// 실행
+server.listen(port, ()=> {
+
+    console.log("서버 실행중")
+
+})
