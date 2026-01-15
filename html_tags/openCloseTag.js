@@ -9,7 +9,7 @@ import openTag from "./openTag.js";
 
 
 // types, values, children 모두 기본값 빈 배열
-const openCloseTag = (tagName, types = [], values = [], children=[])=> {
+const openCloseTag = (tagName, {types = [], values = [], children=[]}={})=> {
 
     // 시작 태그
     // openTag 함수 import
@@ -53,14 +53,14 @@ const openCloseTag = (tagName, types = [], values = [], children=[])=> {
 // // 내용이 있는 태그
 // const testTag4 = openCloseTag("p", [], [], ["안녕하세요! 내용이 있는 태그입니다."]);
 // // 모두 없는 태그
-// const testTag5 = openCloseTag("script")
+const testTag5 = openCloseTag("script")
 
 // // 출력
 // console.log(testTag1);
 // console.log(testTag2);
 // console.log(testTag3);
 // console.log(testTag4);
-// console.log(testTag5);
+console.log(testTag5);
 
 // export
 export default openCloseTag;
